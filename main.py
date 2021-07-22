@@ -1,7 +1,7 @@
 # def intro():
 #   print('You log off and leave labs. It is 2am and after a very long session of debugging, '
 #        'you finally found the bug. (It was a 1 instead of a 0 :/)\n'
-#       'Making your way to the exit you are filled with happiness at the though of sleep. You attempt to open'
+#       'Making your way to the exit you are filled with happiness at the thought of sleep. You attempt to open'
 #      ' the door, but it is locked\n')
 #
 #   print()
@@ -9,11 +9,13 @@
 # print('| WELCOME TO HUXLEY HORROR |')
 # print('----------------------------')
 
+# 308
+# 311 - abbas writing on the board
+
 import time
+import simple
+import advanced
 
-# Imports a module to add a pause
-
-# Figuring out how users might respond
 answer_A = ["A", "a"]
 answer_B = ["B", "b"]
 answer_C = ["C", "c"]
@@ -24,30 +26,38 @@ no = ["N", "n", "no"]
 sword = 0
 flower = 0
 
+homework = 0
+exit_key = 0
+
 required = ("\nUse only A, B, or C\n")
+
 
 # Cutting down on duplication
 
 # The story is broken into sections, starting with "intro"
 def intro():
-    print("After a drunken night out with friends, you awaken the "
-          "next morning in a thick, dank forest. Head spinning and "
-          "fighting the urge to vomit, you stand and marvel at your new, "
-          "unfamiliar setting. The peace quickly fades when you hear a "
-          "grotesque sound emitting behind you. A slobbering orc is "
-          "running towards you. You will:")
+    print("After a very long session of debugging, you log off and leave labs. It is 2am and\n" +
+          "you finally found the bug. Making your way to the exit you are filled with happiness\n" +
+          "at the thought of sleep. A cloud of terror wafts over you as you realised there is\n" +
+          "discrete maths homework due tomorrow and you haven't even started.\n"
+          "What do you do?:")
     time.sleep(1)
-    print("""  A. Grab a nearby rock and throw it at the orc
-  B. Lie down and wait to be mauled
-  C. Run""")
+    print("""
+    A. Do homework now
+    B. Wake up early tomorrow to do it
+    C. Don't do homework.
+    """)
     choice = input(">>> ")  # Here is your first choice.
     if choice in answer_A:
-        option_rock()
+        option_HWnow()
     elif choice in answer_B:
-        print("\nWelp, that was quick. "
-              "\n\nYou died!")
+        option_HWlater()
     elif choice in answer_C:
-        option_run()
+        print("\nYou go home and get some well deserved rest\n"
+              "You walk into your discrete maths lecture and\n"
+              "Steffen asks for your homework. You tell him\n"
+              "you haven't done it. He is not mad just disappointed.\n"
+              "\nRethink your life choices.\n")
     else:
         print(required)
 
@@ -58,9 +68,11 @@ def option_rock():
     print("\nThe orc is stunned, but regains control. He begins "
           "running towards you again. Will you:")
     time.sleep(1)
-    print("""  A. Run
+    print("""
+      A. Run
       B. Throw another rock
-      C. Run towards a nearby cave""")
+      C. Run towards a nearby cave
+      """)
     choice = input(">>> ")
     if choice in answer_A:
         option_run()
@@ -161,8 +173,19 @@ def option_town():
               "\n\nYou died!")
 
 
-intro()
+# intro()
 
 # Press the green button in the gutter to run the script.
-# if __name__ == '__main__':
-#  intro()
+if __name__ == '__main__':
+    intro()
+    # choice = input("Simple or Advanced?")
+
+    # steffen with homework
+    # do it now, wake up early tommorrow and do it, don't do it.
+
+# i got dropped on my head as a child - exit or stay in labs
+# easy - svb
+# medium - mark
+# hard - kgk
+# expert - tony
+# insane - alice herslef
