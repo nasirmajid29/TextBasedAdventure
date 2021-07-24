@@ -64,6 +64,19 @@ def intro():
         intro()
 
 
+def option_HWnow():
+    print()
+    # do all homework => being tired
+    # do some homework => being not tired
+    # give up => no homework but refreshed
+
+def option_HWlater():
+    print()
+    # wake up and do homework  => fully done but tired
+    # sleep a little more => partially done but not tired
+    # oversleep => no homeowkr but refreshed
+
+
 def option_rock():
     print("\nThe orc is stunned, but regains control. He begins "
           "running towards you again. Will you:")
